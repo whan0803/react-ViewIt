@@ -1,0 +1,23 @@
+.buttonContainer {
+    height: 200px;
+    background-color: #040d17;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+
+.button {
+    background-color: rgb(75, 95, 104);
+    width: 215px;
+    height: 55px;
+    border: 1px solid rgb(75, 95, 104);
+    text-align: center;
+    line-height: 55px;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}

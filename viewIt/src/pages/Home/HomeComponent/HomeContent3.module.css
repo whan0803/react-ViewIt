@@ -1,0 +1,50 @@
+.HomeContent3 {
+    width: 100%;
+    height: 1200px;
+    background-color: #040D17;
+    
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1050px;
+    color: white;
+    text-align: center;
+}
+
+
+.title {
+    font-weight: bold;
+    font-size: 100px;
+}
+
+.content {
+
+    font-size: 25px;
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.LiTitle {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.LiContent {
+    font-size: 25px;
+}
+
+.divider {
+    width: 70px;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+    
+}
