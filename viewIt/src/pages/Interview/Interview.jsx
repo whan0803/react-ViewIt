@@ -1,19 +1,32 @@
-import Header from "../../components/Header"
-import Footer from "../../components/Footer"
-import InterviewQuestion from "./InterviewComponent/InterviewQuestion"
-import InterViewCamera from "./InterviewComponent/InterViewCamera"
-import Buttons from "../../components/Buttons"
+import Header from "../../components/Header";
+import InterviewQuestion from "./InterviewComponent/InterviewQuestion";
+import InterViewCamera from "./InterviewComponent/InterViewCamera";
+import Footer from "../../components/Footer";
+import Buttons from "../../components/Buttons";
+import useQuestions from "../../Hooks/useQuestions";
+import { useState } from "react";
 
 const Interview = () => {
-    return(
-        <div style={{display: 'flex', flexDirection:'column',  height: '100vh'}}>
-            <Header />
-            <InterviewQuestion />
-            <InterViewCamera />
-            <Buttons />
+  const { startInterview, nextQuestion, started, currentQuestion, isFinished } =
+    useQuestions();
 
-        </div>
-    )
-}
+  const [emotionCount, setEmotionCount] = useState(null);
 
-export default Interview
+  return (
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <Header />
+      <InterviewQuestion started={started} currentQuestion={currentQuestion} />
+      <InterViewCamera onEmotionUpdate={setEmotionCount} />
+      <Buttons
+        startInterview={startInterview}
+        nextQuestion={nextQuestion}
+        started={started}
+        isFinished={isFinished}
+        emotionCount={emotionCount}
+      />
+      <Footer />
+    </div>
+  );
+};
+
+export default Interview;

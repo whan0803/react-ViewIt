@@ -26,7 +26,6 @@ const Header = () => {
             <ul className={styles.ul}>
                 <li className={styles.li} onClick={goHome}>소개</li>
                 <li className={styles.li} onClick={goInterView}>녹화</li>
-                <li className={styles.li}>Mypage</li>
             </ul>
         </div>
     )

@@ -1,0 +1,60 @@
+.FeedbackMain {
+  flex: 1;
+  background-color: #040d17;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  padding-left: 80px;
+
+  overflow-y: auto;   /* ⭐ 이거 */
+  min-height: 0;      /* ⭐ flex 스크롤 필수 */
+}
+
+/* AI 이미지 */
+.aiImg {
+  width: 90px;
+  height: 100px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+/* 💬 말풍선 박스 */
+.messageBox {
+  max-width: 70%;
+  max-height: 70vh;     /* ⭐ 추가 */
+  overflow-y: auto;    /* ⭐ 추가 */
+
+  padding: 16px 20px;
+  background-color: #2c2f36;
+  border-radius: 16px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 텍스트 */
+.text {
+  color: #e6f0ff;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* 타이핑 커서 효과 */
+.text::after {
+  content: "|";
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
